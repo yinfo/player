@@ -1,4 +1,3 @@
-
 /**
  * Welcome to your Workbox-powered service worker!
  *
@@ -12,13 +11,14 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "./assets/precache-manifest.910d773f56d5d817820cd2a9db4ce8eb.js"
+  "./assets/precache-manifest.3a6bfc3bbc707c4aed3e40db6b80d46a.js"
 );
 
 workbox.core.skipWaiting();
+
 workbox.core.clientsClaim();
 
 /**
