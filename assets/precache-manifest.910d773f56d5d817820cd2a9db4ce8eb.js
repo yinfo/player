@@ -1,3 +1,4 @@
+
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "url": "./assets/app.cc64a9d466d85af3b014.js"
