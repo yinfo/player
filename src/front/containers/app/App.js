@@ -63,17 +63,17 @@ function App({
 
   return (
     <div>
-      <Header
-        appName={appName}
-        userLogin={userInfos.login}
-        userFirstname={userInfos.firstname}
-        userLastname={userInfos.lastname}
-        userPicture={UserIMG}
-        showPicture={userInfos.showPicture}
-        currentView={currentView}
-        toggleSideMenu={handlesMenuButtonClick}
-        onLogout={handlesOnLogout}
-      />
+      {/*<Header*/}
+        {/*appName={appName}*/}
+        {/*userLogin={userInfos.login}*/}
+        {/*userFirstname={userInfos.firstname}*/}
+        {/*userLastname={userInfos.lastname}*/}
+        {/*userPicture={UserIMG}*/}
+        {/*showPicture={userInfos.showPicture}*/}
+        {/*currentView={currentView}*/}
+        {/*toggleSideMenu={handlesMenuButtonClick}*/}
+        {/*onLogout={handlesOnLogout}*/}
+      {/*/>*/}
       <div className="wrapper row-offcanvas row-offcanvas-left">
         <AsideLeft
           isAnimated={true}

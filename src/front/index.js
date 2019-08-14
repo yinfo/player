@@ -33,7 +33,7 @@ function renderApp(RootComponent) {
 
       <AppContainer warnings={false}>
         {/*<Provider videoStore={videoStore} >*/}
-        <RootComponent path={base} />
+        <RootComponent  path={base} />
         {/*</Provider>*/}
       </AppContainer>,
       BootstrapedElement,

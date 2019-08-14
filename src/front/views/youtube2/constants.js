@@ -9,19 +9,19 @@ export const  PlayerState = {
   CUED: 5
 };
 export const initialPlaylist = {
-  title:'Йога дивана. Для выходящих из комы.',
+  title:'Йога дивана. Для выходящих из комы',
   autoPlay: false,
   videos:[
     {
       id: '1',
-      title:'Поза воина',
+      title:'Упражнение стоя',
       videoId: 'E5i4rDc_GA8',
       startSeconds: 26,
       endSeconds: 93,
     },
     {
       id: '2',
-      title:'Мах кабаевой',
+      title:'Упражнение на карачках',
       videoId: 'E5i4rDc_GA8',
       startSeconds: 276,
       endSeconds: 385,

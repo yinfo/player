@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
-import PlayerButtons from './components/PlayerButtons';
 import VideoList from './components/VideoList';
-
+const queryString = require('query-string');
 let loadYT;
 
 class YouTube extends Component {
@@ -13,33 +12,32 @@ class YouTube extends Component {
   }
 
   componentDidMount() {
-    // if(!this.videoStore.player){
-      // console.log('create player!!')
-      if (!loadYT) {
-        loadYT = new Promise((resolve) => {
-          const tag = document.createElement('script');
-          tag.src = 'https://www.youtube.com/iframe_api';
-          const firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-          window.onYouTubeIframeAPIReady = () => resolve(window.YT);
-        });
-      }
+    // window.history.replaceState( {} , 'youtube', 'youtube?p=1' );
+    const parsed = queryString.parse(location.search);
+    this.videoStore.setQueryParams(parsed);
 
-      loadYT.then((YT) => {
-        new YT.Player(this.youtubePlayerAnchor, this.videoStore.getPlayerConfig());
+    if (!loadYT) {
+      loadYT = new Promise((resolve) => {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        window.onYouTubeIframeAPIReady = () => resolve(window.YT);
       });
-    // }
+    }
 
+    loadYT.then((YT) => {
+      new YT.Player(this.youtubePlayerAnchor, this.videoStore.getPlayerConfig());
+    });
   }
 
   render() {
     return (
       <div className='row'>
-        <div className='col-md-8'>
+        <div className='col-md-7'>
           <div id={this.youtubePlayerAnchor}></div>
         </div>
-        <div className='col-md-4'>
-          {/*<PlayerButtons/>*/}
+        <div className='col-md-5'>
           <VideoList/>
         </div>
       </div>

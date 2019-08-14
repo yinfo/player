@@ -1,28 +1,32 @@
 import React from 'react';
-import { observer, inject } from 'mobx-react';
-import { BootstrapTable, TableHeaderColumn, InsertButton } from 'react-bootstrap-table';
+import {observer, inject} from 'mobx-react';
+import {BootstrapTable, TableHeaderColumn, InsertButton} from 'react-bootstrap-table';
 import '../bin/react-bootstrap-table.css';
 
 let _videoStore = null;
+
 const options = {
   toolBar: createCustomToolBar,
   insertBtn: createCustomInsertButton,
   deleteBtn: createCustomDeleteButton,
 };
+
 const cellEditProp = {
   mode: 'dbclick',
   beforeSaveCell: beforeSaveCell,
 };
+
+function beforeSaveCell(row, cellName, cellValue) {
+
+};
+
 const selectRow = {
   // mode: 'radio' //radio or checkbox
   mode: 'checkbox',  // multi select
   bgColor: '#fefefe',
   selected: ['1'],
+  clickToSelect: true,
 };
-
-function beforeSaveCell(row, cellName, cellValue) {
-
-}
 
 function cellButton(videoStore, cell, row, enumObject, rowIndex) {
   return (
@@ -34,15 +38,13 @@ function cellButton(videoStore, cell, row, enumObject, rowIndex) {
           videoStore.playVideoById(row.id);
         }
       }}
-    >
-      Play!
-    </button>
+    > Play! </button>
   );
 }
 
 function createCustomToolBar(props) {
   return (
-    <div style={{ margin: '15px' }}>
+    <div style={{margin: '15px'}}>
 
       {props.components.btnGroup}
       <button
@@ -63,7 +65,7 @@ function createCustomToolBar(props) {
   );
 }
 
-const VideoList = ({ videoStore }) => {
+const VideoList = ({videoStore}) => {
   _videoStore = videoStore;
   return (
     <BootstrapTable

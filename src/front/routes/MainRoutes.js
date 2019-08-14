@@ -27,34 +27,34 @@ import YoutubePlayer from '../views/youtube'
 
 export const MainRoutes = () => (
   <Switch>
-    <Route exact path="/player" component={YoutubePlayer} />
+    {/*<Route exact path="/player" component={YoutubePlayer} />*/}
 
-    <Route path="/Dashboard/statsCard" component={StatsCardConnected} />
-    <Route path="/Dashboard/earningGraph" component={EarningGraphConnected} />
-    <Route path="/Dashboard/notifications" component={NotificationsConnected} />
-    <Route path="/Dashboard/workProgress" component={WorkProgressConnected} />
-    <Route path="/Dashboard/twitterFeed" component={TwitterFeedConnected} />
-    <Route path="/Dashboard/teamMates" component={TeamMatesViewConnected} />
-    <Route path="/Dashboard/todoList" component={TodoListViewConnected} />
+    {/*<Route path="/Dashboard/statsCard" component={StatsCardConnected} />*/}
+    {/*<Route path="/Dashboard/earningGraph" component={EarningGraphConnected} />*/}
+    {/*<Route path="/Dashboard/notifications" component={NotificationsConnected} />*/}
+    {/*<Route path="/Dashboard/workProgress" component={WorkProgressConnected} />*/}
+    {/*<Route path="/Dashboard/twitterFeed" component={TwitterFeedConnected} />*/}
+    {/*<Route path="/Dashboard/teamMates" component={TeamMatesViewConnected} />*/}
+    {/*<Route path="/Dashboard/todoList" component={TodoListViewConnected} />*/}
 
-    <Route exact path="/simpleTables" component={SimpleTablesConnected} />
+    {/*<Route exact path="/simpleTables" component={SimpleTablesConnected} />*/}
     <Route exact path="/youtube" component={YoutubePlayer} />
-    <Route exact path="/basicElements" component={BasicElementsConnected} />
+    {/*<Route exact path="/basicElements" component={BasicElementsConnected} />*/}
 
-    <Route exact path="/general" component={GeneralConnected} />
-    <Route path="/general/breadcrumb" component={BreadcrumbViewConnected} />
-    <Route path="/general/stat" component={StatViewConnected} />
-    <Route
-      path="/general/basicProgressBars"
-      component={BasicProgressBarConnected}
-    />
-    <Route path="/general/tabPanels" component={TabPanelConnected} />
-    <Route
-      path="/general/stripedProgressBars"
-      component={StripedProgressBarConnected}
-    />
-    <Route path="/general/alerts" component={AlertConnected} />
-    <Route path="/general/pagination" component={PaginationViewConnected} />
+    {/*<Route exact path="/general" component={GeneralConnected} />*/}
+    {/*<Route path="/general/breadcrumb" component={BreadcrumbViewConnected} />*/}
+    {/*<Route path="/general/stat" component={StatViewConnected} />*/}
+    {/*<Route*/}
+      {/*path="/general/basicProgressBars"*/}
+      {/*component={BasicProgressBarConnected}*/}
+    {/*/>*/}
+    {/*<Route path="/general/tabPanels" component={TabPanelConnected} />*/}
+    {/*<Route*/}
+      {/*path="/general/stripedProgressBars"*/}
+      {/*component={StripedProgressBarConnected}*/}
+    {/*/>*/}
+    {/*<Route path="/general/alerts" component={AlertConnected} />*/}
+    {/*<Route path="/general/pagination" component={PaginationViewConnected} />*/}
 
     {/* private views: need user to be authenticated */}
     <PrivateRoute path="/protected" component={ProtectedConnected} />

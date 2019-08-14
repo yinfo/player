@@ -6,11 +6,12 @@
   "homepage": "https://yinfo.github.io/player",
   "scripts": {
     "build": "npm run prod",
+    "deploy": "gh-pages -d docs",
     "start": "cross-env NODE_ENV=dev webpack-dev-server --config ./webpack.hot.reload.config.js --mode development --host 0.0.0.0",
     "serve-dev": "npm run dev && nodemon ./src/server/server.js",
     "serve-prod": "npm run prod && node ./src/server/server.js",
     "predeploy": "npm run prod",
-    "deploy": "gh-pages -d docs",
+
     "deploy_del": "gh-pages -d build",
     "flow": "node_modules/.bin/flow",
     "test": "cross-env NODE_ENV=test jest",

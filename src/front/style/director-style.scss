@@ -312,6 +312,8 @@ body {
       the sidebar and the navbar will automatically become poisitioned fixed
   */
   .fixed {
+
+
     >.header {
       position: fixed;
     }
@@ -334,12 +336,12 @@ body {
 
     .wrapper {
       margin: {
-        top: $HEADER_HEIGHT;
+        top: 0;
       }
     }
 
     .sidebar-offcanvas {
-      margin-top: 50px;
+      margin-top: -50px;
       left: -220px;
     }
 
